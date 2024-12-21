@@ -8,11 +8,11 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      'sans': ['Product Sans', 'NanumSquareNeo'],
-      'serif': ['Product Sans', 'NanumSquareNeo'],
-      'mono': ['Product Sans', 'NanumSquareNeo'],
-      'display': ['Product Sans', 'NanumSquareNeo'],
-      'body': ['Product Sans', 'NanumSquareNeo'],
+      'sans': ['Product Sans', 'NanumSquareNeo', 'Paperlogy'],
+      'serif': ['Product Sans', 'NanumSquareNeo', 'Paperlogy'],
+      'mono': ['Product Sans', 'NanumSquareNeo', 'Paperlogy'],
+      'display': ['Product Sans', 'NanumSquareNeo', 'Paperlogy'],
+      'body': ['Product Sans', 'NanumSquareNeo', 'Paperlogy'],
     },
     darkMode: 'class',
   },

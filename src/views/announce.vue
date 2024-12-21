@@ -5,7 +5,7 @@ import mainItem from '../components/mainItem.vue';
 
 <template>
   <Hero>
-    <template #head-txt>our partners</template>
+    <template #head-txt>공고</template>
   </Hero>
 
   <main class="container max-w-screen-xl mx-auto p-6 text-black dark:text-white">

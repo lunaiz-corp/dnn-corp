@@ -8,15 +8,15 @@ const router = createRouter({
       name: "home",
       component: () => import("../views/HomeView.vue"),
       meta: {
-        title: 'lunaiz.',
+        title: 'DNN',
         ogTitle: 'lunaiz',
         ogDescription: 'our light illuminates your night.',
         ogImage: 'https://cdn.lunaiz.com/lunaiz_logo/lunaiz_logo.png',
       }
     },
     {
-      path: "/about/ci",
-      name: "CI",
+      path: "/about/company",
+      name: "CIㅣDNN",
       component: () => import("../views/about/ci.vue"),
       meta: {
         title: 'CI | lunaiz.',
@@ -26,9 +26,9 @@ const router = createRouter({
       }
     },
     {
-      path: "/about/director",
-      name: "Director",
-      component: () => import("../views/about/director.vue"),
+      path: "/about/company",
+      name: "기업 소개ㅣDNN",
+      component: () => import("../views/about/company.vue"),
       meta: {
         title: '임원 | lunaiz.',
         ogTitle: '임원 | lunaiz',
@@ -59,9 +59,9 @@ const router = createRouter({
       }
     },
     {
-      path: "/partner",
-      name: "Partner",
-      component: () => import("../views/partner.vue"),
+      path: "/announce",
+      name: "공고ㅣDNN",
+      component: () => import("../views/announce.vue"),
       meta: {
         title: 'partner | lunaiz.',
         ogTitle: 'partner | lunaiz',

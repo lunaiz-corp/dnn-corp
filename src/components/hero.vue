@@ -40,10 +40,9 @@ onUnmounted(() => {
     <div class="mx-auto flex items-center">
       <h1
         :style="{ fontSize: responsiveFontSize }"
-        class="block mb-4 leading-none tracking-tight text-gray-900 dark:text-white font-bold whitespace-nowrap">
+        class="block mb-4 leading-none tracking-tight text-gray-900 dark:text-white font-black whitespace-nowrap">
         <slot name="head-txt"></slot>
       </h1>
-      <img class="h-2 md:h-3 mt-auto mb-5 pl-1" src="https://cdn.lunaiz.com/lunaiz_assets/dot.png" alt="dot">
     </div>
   </div>
 </template>

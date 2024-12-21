@@ -1,7 +1,8 @@
 {
-  "name": "lunaiz-web",
+  "name": "dnn",
   "version": "1.0.0",
   "private": false,
+  "author": "lunaiz",
   "type": "module",
   "scripts": {
     "dev": "vite",

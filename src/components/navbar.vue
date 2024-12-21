@@ -7,8 +7,7 @@ import { RouterLink } from 'vue-router'
   <nav class="border-gray-200 dark:bg-gray-900 dark:border-gray-700">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <RouterLink to="/" class="flex items-center rtl:space-x-reverse">
-        <img src="https://cdn.lunaiz.com/lunaiz_logo/logo-l.svg" class="h-9 block dark:hidden" alt="lunaiz logo" />
-        <img src="https://cdn.lunaiz.com/lunaiz_logo/logo-d.svg" class="h-9 hidden dark:block" alt="lunaiz logo" />
+        <img src="https://cdn.lunaiz.com/dnn/dnn.png" class="h-9 block" alt="dnn logo" />
       </RouterLink>
       <div class="flex flex-wrap">
         <button id="theme-toggle-1" type="button"
@@ -37,7 +36,7 @@ import { RouterLink } from 'vue-router'
 
       <div class="hidden w-full md:block md:w-auto" id="navbar-coll">
         <ul
-          class="flex flex-col font-medium text-lg p-4 md:p-0 mt-4 border border-gray-100 rounded md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          class="flex flex-col font-bold text-lg p-4 md:p-0 mt-4 border border-gray-100 rounded md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
             <button id="navlink-1" data-dropdown-toggle="navdrop-1"
               class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">소개
@@ -47,35 +46,16 @@ import { RouterLink } from 'vue-router'
               class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                 <li>
+                  <RouterLink to="/about/company"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">기업
+                  </RouterLink>
+                </li>
+                <li>
                   <RouterLink to="/about/ci"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">CI
                   </RouterLink>
                 </li>
-                <li>
-                  <RouterLink to="/about/director"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">임원
-                  </RouterLink>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <button id="navlink-2" data-dropdown-toggle="navdrop-2"
-              class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">서비스
-            </button>
-            <!-- Dropdown menu -->
-            <div id="navdrop-2"
-              class="z-10 hidden font-normal  bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                <li>
-                  <a href="https://am-to-mxm.lunaiz.com"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">AM
-                    to MXM</a>
-                </li>
-                <!-- <li>
-                  <a href="https://bk.lunaiz.com" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">보겸
-                    당첨 알리미</a>
-                </li> -->
+                
               </ul>
             </div>
           </li>
@@ -101,9 +81,9 @@ import { RouterLink } from 'vue-router'
             </div>
           </li>
           <li>
-            <RouterLink to="/partner"
+            <RouterLink to="/announce"
               class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              파트너</RouterLink>
+              공고</RouterLink>
           </li>
           <li class="hidden md:block">
             <button id="theme-toggle-2" type="button"
