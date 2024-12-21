@@ -23,7 +23,7 @@
         <div>
           <div class="hidden w-full md:block md:w-auto md:ml-20 mb-5 mt-[12rem]" id="navbar-coll">
             <ul
-              class="flex flex-col font-bold text-xl p-4 md:p-0 mt-4 border border-gray-100 rounded md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              class="flex flex-col font-bold text-2xl p-4 md:p-0 mt-4 border border-gray-100 rounded md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <button id="navlink-1" data-dropdown-toggle="navdrop-1"
                   class="flex items-center justify-between w-full py-2 px-3 text-gray-200 rounded hover:text-[#40C9B7] md:hover:bg-transparent md:border-0 md:hover:text-[#40C9B7] md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">소개
