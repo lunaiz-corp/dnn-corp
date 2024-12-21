@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+* {
+    font-display: block!important;
+}
+
+.font-paperlogy {
+    font-family: 'Paperlogy', sans-serif!important;
+}
