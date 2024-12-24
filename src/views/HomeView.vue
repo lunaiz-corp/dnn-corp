@@ -7,15 +7,15 @@
     <div class="w-full justify-items-start">
       <div class="flex relative">
         <h1 class="flex-initial font-paperlogy text-[7rem] md:text-[14rem] font-bold">디지털</h1>
-        <div class="mt-[15rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] w-[39rem] h-6 bottom-0"></div>
-        <div class="mt-[15rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] w-6 h-6 bottom-0 ms-6"></div>
+        <div class="md:mt-[15rem] mt-[7.5rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] md:h-6 md:w-[39rem] w-[4.9rem] h-3 bottom-0"></div>
+        <div class="md:mt-[15rem] mt-[7.5rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] md:h-6 md:w-6 w-3 h-3 bottom-0 ms-3"></div>
       </div>
     </div>
     <div class="w-full justify-items-center">
       <div class="flex">
-        <div class="mt-[15rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] w-[21rem] h-6 bottom-0"></div>
+        <div class="md:mt-[15rem] mt-[7.5rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] md:w-[21rem] w-[2rem] md:h-6 h-3 bottom-0"></div>
         <h1 class="flex-initial font-paperlogy text-[7rem] md:text-[14rem] font-bold">뉴스의</h1>
-        <div class="mt-[15rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] w-[21rem] h-6 bottom-0"></div>
+        <div class="md:mt-[15rem] mt-[7.5rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] md:w-[21rem] w-[2rem] md:h-6 h-3 bottom-0"></div>
       </div>
     </div>
     <div class="w-full justify-items-end">
