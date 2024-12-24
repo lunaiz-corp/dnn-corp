@@ -40,7 +40,7 @@ onUnmounted(() => {
     <div class="mx-auto flex items-center">
       <h1
         :style="{ fontSize: responsiveFontSize }"
-        class="block mb-4 leading-none tracking-tight text-gray-900 dark:text-white font-black whitespace-nowrap">
+        class="block mb-4 leading-none tracking-tight  font-black whitespace-nowrap text-blue-400">
         <slot name="head-txt"></slot>
       </h1>
     </div>

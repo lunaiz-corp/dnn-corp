@@ -1,36 +1,81 @@
-<script setup>
-import Hero from '../components/hero.vue';
-import mainItem from '../components/mainItem.vue';
-</script>
-
 <template>
   <Hero>
-    <template #head-txt>공고</template>
+      <template #head-txt>공 고</template>
   </Hero>
 
-  <main class="container max-w-screen-xl mx-auto p-6 text-black dark:text-white">
-    <div class="w-full space-y-8">
-      <!-- 파트너 목록 항목 1 -->
-      <mainItem title="DNN" descOne="대한민국 언론의 혁신" descTwo="Digital News Network">
-        <template #img>
-          <img 
-            class="h-24 w-auto rounded-md object-contain mx-auto md:mx-0" 
-            src="https://www.dnn.ne.kr/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.e4b94994.png&w=3840&q=75"
-            alt="DNN Logo"
-          />
-        </template>
-      </mainItem>
+  <div class="container max-w-screen-md mx-auto p-4">
+      <main v-if="notices.length" class="space-y-3">
+          <RouterLink v-for="notice in paginatedNotices" :key="notice.id" :to="`/media/notices/` + notice.id"
+              class="block">
+              <listItem :title="notice.title" :descOne="getPreview(notice.content)"
+                  :date="formattedDate(notice.createdAt)" :author="notice.author">
+                  <template #img>
+                      <div v-if="notice.banner_image" class="h-20 w-20">
+                          <img :src="notice.banner_image" alt="notice image"
+                              class="h-full w-full object-cover rounded dark:shadow-gray-800" @error="notice.banner_image = ''" />
+                      </div>
+                  </template>
+              </listItem>
+          </RouterLink>
 
-      <!-- 파트너 목록 항목 2 -->
-      <mainItem title="경기고등학교 방송부 KHBS" descOne="경기고등학교 소식을 가장 빠르게" descTwo="Kyunggi High Broadcasting Service">
-        <template #img>
-          <img 
-            class="h-24 w-auto rounded-md object-contain mx-auto md:mx-0" 
-            src="https://cdn.lunaiz.com/kghs/badge4x.png"
-            alt="KHBS Logo"
-          />
-        </template>
-      </mainItem>
-    </div>
-  </main>
+          <Pagination :totalItems="notices.length" :current-page="currentPage" :items-per-page="noticesPerPage"
+              @page-changed="changePage" class="mt-8" />
+      </main>
+
+      <h1 v-else class="text-2xl text-center font-bold text-gray-400 dark:text-white">No Notices are found</h1>
+  </div>
 </template>
+
+<script setup>
+
+import Hero from '../components/hero.vue'
+import listItem from '../components/listItem.vue'
+import Pagination from '../components/pagination.vue'
+import { RouterLink } from 'vue-router'
+import { ref, onMounted, computed } from 'vue'
+import moment from 'moment'
+import axios from 'axios'
+
+const notices = ref([])
+const currentPage = ref(1)
+const noticesPerPage = 5
+
+const fetchNotices = async () => {
+  try {
+      const response = await axios.get('https://api.lunaiz.com/api/v1/notice')
+      notices.value = response.data.sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      )
+  } catch (error) {
+      console.error('Error fetching notices:', error)
+  }
+}
+
+const formattedDate = (createdAt) => {
+  const date = moment(createdAt)
+  const hours = date.hours()
+  const ampm = hours < 12 ? 'AM' : 'PM'
+  return `${date.format('YYYY.MM.DD.')} ${hours % 12 || 12}:${date.minutes()}  ${ampm}`
+}
+
+const getPreview = (content) => {
+  const maxLength = 20
+  return content.length > maxLength ? content.slice(0, maxLength) + '...' : content
+}
+
+const paginatedNotices = computed(() => {
+  const startIndex = (currentPage.value - 1) * noticesPerPage
+  const endIndex = startIndex + noticesPerPage
+  return notices.value.slice(startIndex, endIndex)
+})
+
+const totalPages = computed(() => Math.ceil(notices.value.length / noticesPerPage))
+
+const changePage = (page) => {
+  if (page >= 1 && page <= totalPages.value) {
+      currentPage.value = page
+  }
+}
+
+onMounted(fetchNotices)
+</script>
