@@ -14,7 +14,7 @@
     <div class="w-full justify-items-center">
       <div class="flex">
         <div class="md:mt-[15rem] mt-[7.5rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] md:w-[21rem] w-[2rem] md:h-6 h-3 bottom-0"></div>
-        <h1 class="flex-initial font-paperlogy text-[7rem] md:text-[14rem] font-bold">뉴스의</h1>
+        <h1 class="flex-initial font-paperlogy text-[7rem] md:text-[14rem] font-bold">뉴스</h1>
         <div class="md:mt-[15rem] mt-[7.5rem] bg-gradient-to-r from-[#40C9B9] to-[#62D6FF] md:w-[21rem] w-[2rem] md:h-6 h-3 bottom-0"></div>
       </div>
     </div>
